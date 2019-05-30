@@ -3,10 +3,10 @@
 # Works under Linux and MacOS only
 library(pirouette)
 library(ggplot2)
-library(ggtree)
+suppressMessages(library(ggtree))
 
 root_folder <- path.expand("~/GitHubs/pirouette_article")
-example_no <- 5
+example_no <- 3
 example_folder <- file.path(root_folder, paste0("example_", example_no))
 dir.create(example_folder, showWarnings = FALSE, recursive = TRUE)
 setwd(example_folder)
@@ -19,6 +19,11 @@ alignment_params <- create_alignment_params(
   mutation_rate = 0.1
 )
 
+# Default chain length
+mcmc_chain_length <- create_mcmc()$chain_length
+# On Travis, use a shorter chain
+if (beastier::is_on_ci()) mcmc_chain_length <- mcmc_chain_length / 10
+
 # JC69, strict, Yule
 generative_experiment <- create_experiment(
   inference_conditions = create_inference_conditions(
@@ -30,7 +35,7 @@ generative_experiment <- create_experiment(
     site_model = create_jc69_site_model(),
     clock_model = create_strict_clock_model(),
     tree_prior = create_yule_tree_prior(),
-    mcmc = create_mcmc(chain_length = 1e+07, store_every = 1000)
+    mcmc = create_mcmc(chain_length = mcmc_chain_length, store_every = 1000)
   )
 )
 generative_experiment <- create_gen_experiment()
