@@ -19,10 +19,6 @@ alignment_params <- create_alignment_params(
   mutation_rate = 0.1
 )
 
-# Default chain length
-mcmc_chain_length <- create_mcmc()$chain_length
-# On Travis, use a shorter chain
-if (beastier::is_on_ci()) mcmc_chain_length <- mcmc_chain_length / 10
 
 # JC69, strict, Yule
 generative_experiment <- create_experiment(
@@ -35,7 +31,7 @@ generative_experiment <- create_experiment(
     site_model = create_jc69_site_model(),
     clock_model = create_strict_clock_model(),
     tree_prior = create_yule_tree_prior(),
-    mcmc = create_mcmc(chain_length = mcmc_chain_length, store_every = 1000)
+    mcmc = create_mcmc(chain_length = 10e+7, store_every = 1000)
   )
 )
 generative_experiment <- create_gen_experiment()
@@ -51,8 +47,8 @@ experiments <- c(list(generative_experiment), candidate_experiments)
 check_experiments(experiments)
 
 # Testing
-if (1 == 2) {
-  experiments <- experiments[1:2]
+if (beastier::is_on_ci()) {
+  # experiments <- experiments[1:2]
   for (i in seq_along(experiments)) {
     experiments[[i]]$inference_model$mcmc <- create_mcmc(chain_length = 10000, store_every = 1000)
     experiments[[i]]$est_evidence_mcmc <- create_mcmc_nested_sampling(
