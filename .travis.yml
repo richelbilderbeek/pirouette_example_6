@@ -12,17 +12,20 @@ r_github_packages:
   - Giappo/mbd
   - jimhester/covr
   - jimhester/lintr
-  - ropensci/babette
   - ropensci/beastier
-  - richelbilderbeek/becosys
   - ropensci/mauricer
-  #- richelbilderbeek/PBD/PBD # Bleeding-edge version
+  - ropensci/babette
+  - richelbilderbeek/mcbette
+  - richelbilderbeek/ribir
+  - richelbilderbeek/becosys
   - richelbilderbeek/pirouette@richel
   - richelbilderbeek/raket@develop
   - MangoTheCat/goodpractice
   - KlausVigo/phangorn
   - ropensci/spelling
-  # - xl0418/dododo
+
+bioc_packages:
+  - ggtree
 
 before_install:
   - echo $TRAVIS_R_VERSION_STRING
@@ -37,7 +40,7 @@ before_install:
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then R --quiet -e 'install.packages("rJava", type="source", repos="http://cran.us.r-project.org")'; fi
 
 script:
-  - Rscript scripts/example_3.R
+  - Rscript example_3.R
 
 after_success:
   - cd ~/GitHubs/pirouette_article; find .
