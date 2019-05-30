@@ -40,7 +40,7 @@ before_install:
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then R --quiet -e 'install.packages("rJava", type="source", repos="http://cran.us.r-project.org")'; fi
 
 script:
-  - Rscript example_3.R
+  - # Rscript example_3.R
 
 after_success:
   - cd ~/GitHubs/pirouette_article; find .
