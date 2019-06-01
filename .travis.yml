@@ -20,7 +20,6 @@ r_github_packages:
   - richelbilderbeek/ribir
   - richelbilderbeek/becosys
   - richelbilderbeek/pirouette@richel
-  - richelbilderbeek/raket@develop
   - MangoTheCat/goodpractice
   - KlausVigo/phangorn
   - ropensci/spelling
