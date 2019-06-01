@@ -44,7 +44,7 @@ before_script:
   - Rscript -e "mauricer::install_beast2_pkg(\"NS\")"
 
 script:
-  - travis_wait 60 Rscript example_3.R
+  - # travis_wait 60 Rscript example_3.R
 
 after_success:
   - cd ~/GitHubs/pirouette_article; find .
