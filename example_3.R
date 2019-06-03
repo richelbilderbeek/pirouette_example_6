@@ -48,11 +48,11 @@ check_experiments(experiments)
 
 # Testing
 if (beastier::is_on_ci()) {
-  # experiments <- experiments[1:2]
+  experiments <- experiments[1:3]
   for (i in seq_along(experiments)) {
-    experiments[[i]]$inference_model$mcmc <- create_mcmc(chain_length = 2000, store_every = 1000)
+    experiments[[i]]$inference_model$mcmc <- create_mcmc(chain_length = 3000, store_every = 1000)
     experiments[[i]]$est_evidence_mcmc <- create_mcmc_nested_sampling(
-      chain_length = 2000,
+      chain_length = 3000,
       store_every = 1000,
       epsilon = 100.0
     )
