@@ -53,7 +53,7 @@ if (beastier::is_on_ci()) {
     experiments[[i]]$inference_model$mcmc <- create_mcmc(chain_length = 2000, store_every = 1000)
     experiments[[i]]$est_evidence_mcmc <- create_mcmc_nested_sampling(
       chain_length = 2000,
-      store_every = 100,
+      store_every = 1000,
       epsilon = 100.0
     )
   }
