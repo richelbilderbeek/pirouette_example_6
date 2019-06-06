@@ -10,7 +10,7 @@ example_no <- 3
 example_folder <- file.path(root_folder, paste0("example_", example_no))
 dir.create(example_folder, showWarnings = FALSE, recursive = TRUE)
 setwd(example_folder)
-set.seed(314)
+set.seed(3141)
 testit::assert(is_beast2_installed())
 phylogeny <- create_yule_tree(n_taxa = 6, crown_age = 10)
 
