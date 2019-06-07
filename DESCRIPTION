@@ -1,13 +1,13 @@
-Package: pirouette_examples
+Package: pirouette_example_3
 Type: Package
-Title: Pirouette Examples 
+Title: Pirouette Example Three
 Version: 0.1.0
 Authors@R: c(
   person("Richel", "Bilderbeek", email = "richel@richelbilderbeek.nl", role = c("aut", "cre"), comment = c(ORCID = "0000-0003-1107-7049")))
 Author: Richel J.C. Bilderbeek <richel@richelbilderbeek.nl>
 Maintainer: Richel J.C. Bilderbeek <richel@richelbilderbeek.nl>
-Description: The examples for pirouette.
-  The main repo for the code is pirouette.
+Description: A 'pirouette' example.
+  The main repo for the code is 'pirouette'.
   The main repo for the scripts is this repo.
 License: GPL-3 | file LICENSE
 Encoding: UTF-8
