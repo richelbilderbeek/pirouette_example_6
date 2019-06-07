@@ -1,0 +1,14 @@
+beast2_input.xml
+beast2_output.log
+beast2_output.trees
+beast2_output.xml.state
+Rplots.pdf
+error.csv
+beast2_input_best.xml
+beast2_output_best.log
+beast2_output_best.trees
+beast2_output_best.xml.trees
+true.fasta
+true.posterior.log
+true.posterior.trees
+beast2_output_best.xml.state
