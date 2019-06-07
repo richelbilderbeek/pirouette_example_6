@@ -7,3 +7,6 @@ Branch   |[![Travis CI logo](TravisCI.png)](https://travis-ci.org)
 
 A [pirouette example](https://github.com/richelbilderbeek/pirouette_examples).
 
+## Results
+
+![](example_3/errors.png)
