@@ -1,11 +1,12 @@
-# Code of example 5
+# Code of example 3
 #
 # Works under Linux and MacOS only
 library(pirouette)
-library(ggplot2)
+suppressMessages(library(ggplot2))
 suppressMessages(library(ggtree))
 
-root_folder <- path.expand("~/GitHubs/pirouette_article")
+#root_folder <- path.expand("~/GitHubs/pirouette_article")
+root_folder <- getwd()
 example_no <- 3
 example_folder <- file.path(root_folder, paste0("example_", example_no))
 dir.create(example_folder, showWarnings = FALSE, recursive = TRUE)
