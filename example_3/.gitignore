@@ -12,3 +12,6 @@ true.fasta
 true.posterior.log
 true.posterior.trees
 beast2_output_best.xml.state
+beast2_*
+true.*
+error_*
