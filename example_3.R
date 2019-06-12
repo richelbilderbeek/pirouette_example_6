@@ -1,6 +1,33 @@
 # Code of example 3
 #
 # Works under Linux and MacOS only
+#
+#
+#
+
+# Set the RNG seed
+rng_seed <- 314
+args <- commandArgs(trailingOnly = TRUE)
+if (length(args) == 1) {
+  arg <- suppressWarnings(as.numeric(args[1]))
+  if (is.na(arg)) {
+    stop(
+      "Please supply a numerical value for the RNG seed. \n",
+      "Actual value: ", args[1]
+    )
+  }
+  rng_seed <- arg
+  if (rng_seed < 1) {
+    stop("Please supply an RNG seed with a positive non-zero value")
+  }
+}
+if (length(args) > 1) {
+  stop(
+    "Please supply only 1 argument for the RNG seed. \n",
+    "Number of arguments given: ", length(args) - 1
+  )
+}
+
 library(pirouette)
 suppressMessages(library(ggplot2))
 suppressMessages(library(ggtree))
@@ -10,13 +37,14 @@ example_no <- 3
 example_folder <- file.path(root_folder, paste0("example_", example_no))
 dir.create(example_folder, showWarnings = FALSE, recursive = TRUE)
 setwd(example_folder)
-set.seed(314)
+set.seed(rng_seed)
 testit::assert(is_beast2_installed())
 phylogeny <- create_yule_tree(n_taxa = 6, crown_age = 10)
 
 alignment_params <- create_alignment_params(
   root_sequence = create_blocked_dna(length = 1000),
-  mutation_rate = 0.1
+  mutation_rate = 0.1,
+  rng_seed = rng_seed
 )
 
 
@@ -62,7 +90,9 @@ if (beastier::is_on_ci()) {
 pir_params <- create_pir_params(
   alignment_params = alignment_params,
   experiments = experiments,
-  twinning_params = create_twinning_params()
+  twinning_params = create_twinning_params(
+    rng_seed = rng_seed
+  )
 )
 
 print("#######################################################################")
