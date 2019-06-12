@@ -72,6 +72,12 @@ candidate_experiments <- create_all_experiments(
 check_experiments(candidate_experiments)
 
 experiments <- c(list(generative_experiment), candidate_experiments)
+
+# Set the RNG seed
+for (i in seq_along(experiments)) {
+  experiments[[i]]$beast2_options$rng_seed <- rng_seed
+}
+
 check_experiments(experiments)
 
 # Testing
