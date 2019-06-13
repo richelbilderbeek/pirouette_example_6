@@ -178,7 +178,7 @@ sink(file.path(example_folder, "evidence_true.latex"))
 xtable::print.xtable(
   xtable::xtable(
     df_evidences,
-    caption = "Evidences of example 5", label = "tab:evidences_example_5", digits = 3
+    caption = "Evidences of example ", example_no, label = "tab:evidences_example_5", digits = 3
   ),
   include.rownames = FALSE
 )
