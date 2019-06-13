@@ -49,6 +49,9 @@ before_script:
   - Rscript -e "mauricer::install_beast2_pkg(\"NS\")"
 
 script:
+  # Delete all previous results
+  - rm -rf example_3_314
+  # Go!
   - travis_wait 60 Rscript example_3.R
   # Check dead links
   - rm .travis.yml
