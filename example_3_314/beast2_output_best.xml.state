@@ -1,0 +1,16 @@
+<itsabeastystatewerein version='2.0' sample='10000000'>
+<statenode id='Tree.t:true'>((((0:0.057415174647945245,5:0.057415174647945245)6:0.0811961278534361,4:0.13861130250138134)7:0.5789456512586222,(2:0.18428857895826442,3:0.18428857895826442)9:0.533268374801739)8:0.16585491790711737,1:0.8834118716671209)10:0.0</statenode>
+<statenode id='popSize.t:true'>popSize.t:true[1 1] (-Infinity,Infinity): 0.8323571609576832 </statenode>
+</itsabeastystatewerein>
+<!--
+{"operators":[
+{"id":"PopSizeScaler.t:true","p":0.21895070945539555,"accept":107817,"reject":291276,"acceptFC":106780,"rejectFC":291059,"rejectIv":0,"rejectOp":0},
+{"id":"CoalescentConstantTreeScaler.t:true","p":0.7733173611733876,"accept":79288,"reject":320900,"acceptFC":79196,"rejectFC":319742,"rejectIv":0,"rejectOp":0},
+{"id":"CoalescentConstantTreeRootScaler.t:true","p":0.6291968978305323,"accept":81688,"reject":319033,"acceptFC":81548,"rejectFC":317935,"rejectIv":69028,"rejectOp":69028},
+{"id":"CoalescentConstantUniformOperator.t:true","p":"NaN","accept":396330,"reject":3604156,"acceptFC":395087,"rejectFC":3592520,"rejectIv":0,"rejectOp":0},
+{"id":"CoalescentConstantSubtreeSlide.t:true","p":0.17790962655893539,"accept":305398,"reject":1694004,"acceptFC":305184,"rejectFC":1687960,"rejectIv":364820,"rejectOp":364820},
+{"id":"CoalescentConstantNarrow.t:true","p":"NaN","accept":3714,"reject":1995730,"acceptFC":3672,"rejectFC":1989365,"rejectIv":0,"rejectOp":0},
+{"id":"CoalescentConstantWide.t:true","p":"NaN","accept":103,"reject":400517,"acceptFC":103,"rejectFC":399248,"rejectIv":222244,"rejectOp":222244},
+{"id":"CoalescentConstantWilsonBalding.t:true","p":"NaN","accept":26,"reject":400021,"acceptFC":25,"rejectFC":398800,"rejectIv":205375,"rejectOp":205375}
+]}
+-->
