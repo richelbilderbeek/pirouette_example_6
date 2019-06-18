@@ -151,9 +151,6 @@ utils::write.csv(
 pir_plot(errors) +
   ggsave(file.path(example_folder, "errors.png"))
 
-print("#######################################################################")
-print("Appendix")
-print("#######################################################################")
 pir_to_pics(
   phylogeny = phylogeny,
   pir_params = pir_params,
