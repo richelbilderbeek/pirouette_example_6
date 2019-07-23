@@ -1,4 +1,4 @@
-# Code of example 3
+# Code of example 6
 #
 # Works under Linux and MacOS only
 #
@@ -33,7 +33,7 @@ suppressMessages(library(ggplot2))
 suppressMessages(library(ggtree))
 
 root_folder <- getwd()
-example_no <- 3
+example_no <- 6
 example_folder <- file.path(root_folder, paste0("example_", example_no, "_", rng_seed))
 dir.create(example_folder, showWarnings = FALSE, recursive = TRUE)
 setwd(example_folder)
