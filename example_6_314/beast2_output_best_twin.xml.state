@@ -1,0 +1,22 @@
+<itsabeastystatewerein version='2.0' sample='10000000'>
+<statenode id='Tree.t:twin'>((((0:0.024041622091396805,5:0.024041622091396805)9:0.04051798342882487,4:0.06455960552022168)7:0.36376067563731906,(2:0.07320148593452988,3:0.07320148593452988)8:0.3551187952230108)6:0.44623310482457346,1:0.8745533859821142)10:0.0</statenode>
+<statenode id='ucldStdev.c:twin'>ucldStdev.c:twin[1 1] (0.0,Infinity): 0.15101207583428458 </statenode>
+<statenode id='rateCategories.c:twin'>rateCategories.c:twin[10 1] (0,9): 4 6 7 5 3 9 5 8 0 2 </statenode>
+<statenode id='popSize.t:twin'>popSize.t:twin[1 1] (-Infinity,Infinity): 0.8302745265433171 </statenode>
+</itsabeastystatewerein>
+<!--
+{"operators":[
+{"id":"PopSizeScaler.t:twin","p":0.2255122061121381,"accept":78380,"reject":200485,"acceptFC":77477,"rejectFC":200274,"rejectIv":0,"rejectOp":0},
+{"id":"CoalescentConstantTreeScaler.t:twin","p":0.7497709159585209,"accept":56522,"reject":221353,"acceptFC":56435,"rejectFC":220349,"rejectIv":0,"rejectOp":0},
+{"id":"CoalescentConstantTreeRootScaler.t:twin","p":0.5966784621041892,"accept":57672,"reject":220466,"acceptFC":57501,"rejectFC":219543,"rejectIv":2560,"rejectOp":2560},
+{"id":"CoalescentConstantUniformOperator.t:twin","p":"NaN","accept":247683,"reject":2530927,"acceptFC":246654,"rejectFC":2521132,"rejectIv":0,"rejectOp":0},
+{"id":"CoalescentConstantSubtreeSlide.t:twin","p":0.3035913929029581,"accept":108241,"reject":1278908,"acceptFC":108075,"rejectFC":1273500,"rejectIv":418035,"rejectOp":418035},
+{"id":"CoalescentConstantNarrow.t:twin","p":"NaN","accept":1928,"reject":1387863,"acceptFC":1921,"rejectFC":1382596,"rejectIv":0,"rejectOp":0},
+{"id":"CoalescentConstantWide.t:twin","p":"NaN","accept":51,"reject":276731,"acceptFC":51,"rejectFC":275707,"rejectIv":153964,"rejectOp":153964},
+{"id":"CoalescentConstantWilsonBalding.t:twin","p":"NaN","accept":9,"reject":277580,"acceptFC":9,"rejectFC":276567,"rejectIv":142229,"rejectOp":142229},
+{"id":"ucldStdevScaler.c:twin","p":0.26491665396397,"accept":68049,"reject":210097,"acceptFC":67731,"rejectFC":209286,"rejectIv":0,"rejectOp":0},
+{"id":"CategoriesRandomWalk.c:twin","p":"NaN","accept":415631,"reject":508891,"acceptFC":414225,"rejectFC":506801,"rejectIv":372481,"rejectOp":372481},
+{"id":"CategoriesSwapOperator.c:twin","p":"NaN","accept":424742,"reject":501966,"acceptFC":423532,"rejectFC":499507,"rejectIv":0,"rejectOp":0},
+{"id":"CategoriesUniform.c:twin","p":"NaN","accept":499878,"reject":425948,"acceptFC":498403,"rejectFC":423891,"rejectIv":0,"rejectOp":0}
+]}
+-->
