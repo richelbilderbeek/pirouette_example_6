@@ -97,7 +97,8 @@ pir_params <- create_pir_params(
   alignment_params = alignment_params,
   experiments = experiments,
   twinning_params = create_twinning_params(
-    rng_seed = rng_seed
+    rng_seed_twin_tree = rng_seed,
+    rng_seed_twin_alignment = rng_seed
   )
 )
 
