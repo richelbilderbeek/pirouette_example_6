@@ -102,46 +102,14 @@ pir_params <- create_pir_params(
   )
 )
 
-print("#######################################################################")
-print("Settings to run on Peregrine cluster")
-print("#######################################################################")
-pir_params$alignment_params$fasta_filename <- file.path(example_folder, "true.fasta")
-for (i in seq_along(pir_params$experiments)) {
-  pir_params$experiments[[i]]$beast2_options$input_filename <- file.path(example_folder, "beast2_input_best.xml")
-  pir_params$experiments[[i]]$beast2_options$output_log_filename <- file.path(example_folder, "beast2_output_best.log")
-  pir_params$experiments[[i]]$beast2_options$output_trees_filenames <- file.path(example_folder, "beast2_output_best.trees")
-  pir_params$experiments[[i]]$beast2_options$output_state_filename <- file.path(example_folder, "beast2_output_best.xml.state")
-  pir_params$experiments[[i]]$beast2_options$beast2_working_dir <- example_folder
-  pir_params$experiments[[i]]$errors_filename <- file.path(example_folder, "error_best.csv")
-}
-pir_params$experiments[[1]]$beast2_options$input_filename <- file.path(example_folder, "beast2_input_gen.xml")
-pir_params$experiments[[1]]$beast2_options$output_log_filename <- file.path(example_folder, "beast2_output_gen.log")
-pir_params$experiments[[1]]$beast2_options$output_trees_filenames <- file.path(example_folder, "beast2_output_gen.trees")
-pir_params$experiments[[1]]$beast2_options$output_state_filename <- file.path(example_folder, "beast2_output_gen.xml.state")
-pir_params$experiments[[1]]$errors_filename <- file.path(example_folder, "error_gen.csv")
-pir_params$evidence_filename <- file.path(example_folder, "evidence_true.csv")
-if (!is_one_na(pir_params$twinning_params)) {
-  pir_params$twinning_params$twin_tree_filename <- file.path(example_folder, "twin.tree")
-  pir_params$twinning_params$twin_alignment_filename <- file.path(example_folder, "twin.fasta")
-  pir_params$twinning_params$twin_evidence_filename <- file.path(example_folder, "evidence_twin.csv")
-}
+# Make Peregrine friendly
+pir_params <- peregrine::to_pff_pir_params(pir_params)
 rm_pir_param_files(pir_params)
-print("#######################################################################")
 
-Sys.time()
 errors <- pir_run(
   phylogeny,
   pir_params = pir_params
 )
-Sys.time()
-
-if (1 == 2) {
-  errors <- utils::read.csv(
-    file = file.path(example_folder, "errors.csv")
-  )
-  check_pir_out(errors)
-  pir_plot(pir_out = errors)
-}
 
 utils::write.csv(
   x = errors,
