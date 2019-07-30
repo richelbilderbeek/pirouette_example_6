@@ -12,5 +12,6 @@ Description: A 'pirouette' example.
 License: GPL-3 | file LICENSE
 Encoding: UTF-8
 LazyData: true
-Imports: 
+Imports:
+    beastier (>= 2.0.17)
 Suggests: tidyr
