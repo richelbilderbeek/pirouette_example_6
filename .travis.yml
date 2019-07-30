@@ -15,13 +15,14 @@ r_github_packages:
   - jimhester/covr
   - jimhester/lintr
   - ropensci/beautier
+  - ropensci/tracerer
   - ropensci/beastier
   - ropensci/mauricer
   - ropensci/babette
   - richelbilderbeek/mcbette
   - richelbilderbeek/ribir
   - richelbilderbeek/becosys
-  - richelbilderbeek/pirouette@richel
+  - richelbilderbeek/pirouette
   - richelbilderbeek/peregrine
   - MangoTheCat/goodpractice
   - KlausVigo/phangorn
