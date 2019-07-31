@@ -73,6 +73,8 @@ check_experiments(candidate_experiments)
 
 experiments <- c(list(generative_experiment), candidate_experiments)
 
+check_experiments(experiments)
+
 # Set the RNG seed
 for (i in seq_along(experiments)) {
   experiments[[i]]$beast2_options$rng_seed <- rng_seed
@@ -92,6 +94,7 @@ if (beastier::is_on_ci()) {
     )
   }
 }
+check_experiments(experiments)
 
 pir_params <- create_pir_params(
   alignment_params = alignment_params,
@@ -102,8 +105,14 @@ pir_params <- create_pir_params(
   )
 )
 
+check_pir_params(pir_params)
+
 # Make Peregrine friendly
-pir_params <- peregrine::to_pff_pir_params(pir_params)
+if (1 == 2) {
+  pir_params <- peregrine::to_pff_pir_params(pir_params)
+}
+check_pir_params(pir_params)
+
 rm_pir_param_files(pir_params)
 
 errors <- pir_run(
