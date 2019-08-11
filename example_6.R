@@ -30,7 +30,6 @@ if (length(args) > 1) {
 
 library(pirouette)
 suppressMessages(library(ggplot2))
-suppressMessages(library(ggtree))
 
 root_folder <- getwd()
 example_no <- 6
