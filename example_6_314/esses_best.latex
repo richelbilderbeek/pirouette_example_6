@@ -1,0 +1,19 @@
+% latex table generated in R 3.6.0 by xtable 1.8-4 package
+% Thu Aug 15 15:59:21 2019
+\begin{table}[ht]
+\centering
+\begin{tabular}{ll}
+  \hline
+parameter & ESS \\ 
+  \hline
+posterior & 10001 \\ 
+  likelihood & 10001 \\ 
+  prior & 10001 \\ 
+  treeLikelihood & 10001 \\ 
+  TreeHeight & 10001 \\ 
+  popSize & 9508 \\ 
+  CoalescentConstant & 10001 \\ 
+   \hline
+\end{tabular}
+\caption{ESSes for best candidate model} 
+\end{table}

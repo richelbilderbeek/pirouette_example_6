@@ -1,0 +1,28 @@
+% latex table generated in R 3.6.0 by xtable 1.8-4 package
+% Thu Aug 15 15:59:23 2019
+\begin{table}[ht]
+\centering
+\begin{tabular}{ll}
+  \hline
+parameter & ESS \\ 
+  \hline
+posterior & 9298 \\ 
+  likelihood & 9344 \\ 
+  prior & 1001 \\ 
+  treeLikelihood & 9344 \\ 
+  TreeHeight & 10001 \\ 
+  rateAC & 450 \\ 
+  rateAG & 566 \\ 
+  rateAT & 482 \\ 
+  rateCG & 413 \\ 
+  rateGT & 391 \\ 
+  freqParameter.1 & 715 \\ 
+  freqParameter.2 & 622 \\ 
+  freqParameter.3 & 727 \\ 
+  freqParameter.4 & 692 \\ 
+  popSize & 10001 \\ 
+  CoalescentConstant & 9685 \\ 
+   \hline
+\end{tabular}
+\caption{ESSes for best candidate model, twin tree} 
+\end{table}

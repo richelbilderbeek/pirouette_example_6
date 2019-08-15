@@ -1,0 +1,51 @@
+% latex table generated in R 3.6.0 by xtable 1.8-4 package
+% Thu Aug 15 15:59:18 2019
+\begin{table}[ht]
+\centering
+\begin{tabular}{lllrr}
+  \hline
+Site model & Clock model & Tree prior & log(evidence) & Weight \\ 
+  \hline
+GTR & RLN & BD & -5233.444 & 0.000 \\ 
+  GTR & RLN & CBS & -5287.185 & 0.000 \\ 
+  GTR & RLN & CCP & -5248.493 & 0.000 \\ 
+  GTR & RLN & CEP & -5235.928 & 0.000 \\ 
+  GTR & RLN & Yule & -5247.231 & 0.000 \\ 
+  GTR & Strict & BD & -5231.906 & 0.001 \\ 
+  GTR & Strict & CBS & -5266.645 & 0.000 \\ 
+  GTR & Strict & CCP & -5225.894 & 0.452 \\ 
+  GTR & Strict & CEP & -5262.360 & 0.000 \\ 
+  GTR & Strict & Yule & -5254.428 & 0.000 \\ 
+  HKY & RLN & BD & -5240.130 & 0.000 \\ 
+  HKY & RLN & CBS & -5245.990 & 0.000 \\ 
+  HKY & RLN & CCP & -5232.504 & 0.001 \\ 
+  HKY & RLN & CEP & -5238.227 & 0.000 \\ 
+  HKY & RLN & Yule & -5230.090 & 0.007 \\ 
+  HKY & Strict & BD & -5234.719 & 0.000 \\ 
+  HKY & Strict & CBS & -5229.123 & 0.018 \\ 
+  HKY & Strict & CCP & -5237.785 & 0.000 \\ 
+  HKY & Strict & CEP & -5242.285 & 0.000 \\ 
+  HKY & Strict & Yule & -5231.662 & 0.001 \\ 
+  JC & RLN & BD & -5230.193 & 0.006 \\ 
+  JC & RLN & CBS & -5231.908 & 0.001 \\ 
+  JC & RLN & CCP & -5229.157 & 0.017 \\ 
+  JC & RLN & CEP & -5231.351 & 0.002 \\ 
+  JC & RLN & Yule & -5232.050 & 0.001 \\ 
+  JC & Strict & BD & -5226.668 & 0.208 \\ 
+  JC & Strict & CBS & -5232.229 & 0.001 \\ 
+  JC & Strict & CCP & -5229.369 & 0.014 \\ 
+  JC & Strict & CEP & -5226.448 & 0.260 \\ 
+  TN & RLN & BD & -5241.667 & 0.000 \\ 
+  TN & RLN & CBS & -5253.193 & 0.000 \\ 
+  TN & RLN & CCP & -5236.705 & 0.000 \\ 
+  TN & RLN & CEP & -5236.449 & 0.000 \\ 
+  TN & RLN & Yule & -5239.016 & 0.000 \\ 
+  TN & Strict & BD & -5245.144 & 0.000 \\ 
+  TN & Strict & CBS & -5237.407 & 0.000 \\ 
+  TN & Strict & CCP & -5234.696 & 0.000 \\ 
+  TN & Strict & CEP & -5229.855 & 0.009 \\ 
+  TN & Strict & Yule & -5235.212 & 0.000 \\ 
+   \hline
+\end{tabular}
+\caption{Evidences for twin phylogeny} 
+\end{table}
