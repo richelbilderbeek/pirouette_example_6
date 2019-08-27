@@ -18,7 +18,7 @@ r_github_packages:
   - ropensci/tracerer
   - ropensci/beastier
   - ropensci/mauricer
-  - ropensci/babette@develop
+  - ropensci/babette
   - richelbilderbeek/mcbette
   - richelbilderbeek/ribir
   - richelbilderbeek/becosys
