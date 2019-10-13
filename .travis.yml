@@ -22,6 +22,7 @@ r_github_packages:
   - richelbilderbeek/mcbette
   - richelbilderbeek/ribir
   - richelbilderbeek/becosys
+  - richelbilderbeek/nodeSub
   - richelbilderbeek/pirouette@richel
   - richelbilderbeek/peregrine
   - MangoTheCat/goodpractice
