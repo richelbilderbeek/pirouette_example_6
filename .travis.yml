@@ -14,7 +14,7 @@ r_github_packages:
   - Giappo/mbd
   - jimhester/covr
   - jimhester/lintr
-  - ropensci/beautier@develop
+  - ropensci/beautier
   - ropensci/tracerer
   - ropensci/beastier
   - ropensci/mauricer
@@ -23,7 +23,7 @@ r_github_packages:
   - richelbilderbeek/ribir
   - richelbilderbeek/becosys
   - thijsjanzen/nodeSub
-  - richelbilderbeek/pirouette@richel
+  - richelbilderbeek/pirouette
   - richelbilderbeek/peregrine
   - MangoTheCat/goodpractice
   - KlausVigo/phangorn
