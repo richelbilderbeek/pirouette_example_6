@@ -42,25 +42,11 @@ phylogeny <- create_yule_tree(n_taxa = 6, crown_age = 10)
 
 alignment_params <- create_alignment_params(
   root_sequence = create_blocked_dna(length = 1000),
-  mutation_rate = 0.1,
   rng_seed = rng_seed
 )
 
 
 # JC69, strict, Yule
-generative_experiment <- create_experiment(
-  inference_conditions = create_inference_conditions(
-    model_type = "generative",
-    run_if = "always",
-    do_measure_evidence = TRUE
-  ),
-  inference_model = create_inference_model(
-    site_model = create_jc69_site_model(),
-    clock_model = create_strict_clock_model(),
-    tree_prior = create_yule_tree_prior(),
-    mcmc = create_mcmc(chain_length = 10e+7, store_every = 1000)
-  )
-)
 generative_experiment <- create_gen_experiment()
 check_experiment(generative_experiment)
 
