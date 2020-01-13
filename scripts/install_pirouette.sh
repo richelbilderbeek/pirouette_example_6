@@ -16,9 +16,7 @@
 #SBATCH --job-name=install_pirouette
 #SBATCH --output=install_pirouette.log
 module load R
-Rscript -e 'devtools::install_github("ropensci/mauricer")'
-Rscript -e 'devtools::install_github("ropensci/babette")'
-Rscript -e 'devtools::install_github("richelbilderbeek/pirouette")'
+Rscript -e 'devtools::install_github("richelbilderbeek/pirouette", dependencies = TRUE)'
 Rscript -e 'devtools::install_github("richelbilderbeek/becosys")'
 Rscript -e 'if (!beastier::is_beast2_installed()) beastier::install_beast2()'
 Rscript -e 'if (!mauricer::is_beast2_pkg_installed("NS")) mauricer::install_beast2_pkg("NS")'
