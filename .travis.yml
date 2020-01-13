@@ -4,19 +4,12 @@ cache: packages
 
 r_github_packages:
   - Giappo/mbd
-  - jimhester/covr
-  - jimhester/lintr
   - richelbilderbeek/mcbette
   - richelbilderbeek/ribir
   - richelbilderbeek/becosys
   - thijsjanzen/nodeSub
   - richelbilderbeek/pirouette
   - richelbilderbeek/peregrine
-  - MangoTheCat/goodpractice
-  - ropensci/spelling
-
-bioc_packages:
-  - ggtree
 
 before_install:
   - echo $TRAVIS_R_VERSION_STRING
@@ -29,10 +22,6 @@ before_install:
   # Java
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then R CMD javareconf; fi
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then R --quiet -e 'install.packages("rJava", type="source", repos="http://cran.us.r-project.org")'; fi
-  # Check dead links
-  - sudo apt-get install -qq npm
-  - npm config set strict-ssl false
-  - sudo npm install -g markdown-link-check
 
 before_script:
   - Rscript -e "beastier::install_beast2()"
@@ -59,9 +48,6 @@ script:
   - if [ ! -f example_6_314/twin_posterior_best.png ]; then echo "file 'twin_posterior_best.png' not found" ; exit 1 ; fi
   - if [ ! -f example_6_314/twin_posterior_gen.png ]; then echo "file 'twin_posterior_gen.png' not found" ; exit 1 ; fi
   - if [ ! -f example_6_314/twin_tree.png ]; then echo "file 'twin_tree.png' not found" ; exit 1 ; fi
-  # Check dead links
-  - rm .travis.yml
-  - ./scripts/check_dead_links
 
 after_success:
   - cd ~/GitHubs/pirouette_article; find .
