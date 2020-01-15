@@ -28,10 +28,8 @@ before_script:
   - Rscript -e "mauricer::install_beast2_pkg(\"NS\")"
 
 script:
-  # Delete all previous results
-  - rm -rf example_6_314
   # Go!
-  - travis_wait 60 Rscript example_6.R
+  - travis_wait 60 ./scripts/rerun.sh
   # Check if all files are created
   - if [ ! -f example_6_314/esses_best.latex ]; then echo "file 'esses_best.latex' not found" ; exit 1 ; fi
   - if [ ! -f example_6_314/esses_gen.latex ]; then echo "file 'esses_gen.latex' not found" ; exit 1 ; fi
