@@ -30,20 +30,20 @@ errors <- pir_run(
 
 utils::write.csv(
   x = errors,
-  file = file.path(example_folder, "errors.csv"),
+  file = file.path(folder_name, "errors.csv"),
   row.names = FALSE
 )
 
 pir_plot(errors) +
-  ggsave(file.path(example_folder, "errors.png"))
+  ggsave(file.path(folder_name, "errors.png"))
 
 pir_to_pics(
   phylogeny = phylogeny,
   pir_params = pir_params,
-  folder = example_folder
+  folder = folder_name
 )
 
 pir_to_tables(
   pir_params = pir_params,
-  folder = example_folder
+  folder = folder_name
 )
