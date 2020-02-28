@@ -31,24 +31,13 @@ before_script:
   - Rscript -e "mauricer::install_beast2_pkg(\"NS\")"
 
 script:
-  # Go!
   - travis_wait 60 ./scripts/rerun.sh
-  # Check if all files are created
-  - if [ ! -f example_6_314/esses_best.latex ]; then echo "file 'esses_best.latex' not found" ; exit 1 ; fi
-  - if [ ! -f example_6_314/esses_gen.latex ]; then echo "file 'esses_gen.latex' not found" ; exit 1 ; fi
-  - if [ ! -f example_6_314/esses_twin_best.latex ]; then echo "file 'esses_twin_best.latex' not found" ; exit 1 ; fi
-  - if [ ! -f example_6_314/esses_twin_gen.latex ]; then echo "file 'esses_twin_gen.latex' not found" ; exit 1 ; fi
-  - if [ ! -f example_6_314/true_alignment.png ]; then echo "file 'true_alignment.png' not found" ; exit 1 ; fi
-  - if [ ! -f example_6_314/true_error_violin_best.png ]; then echo "file 'true_error_violin_best.png' not found" ; exit 1 ; fi
-  - if [ ! -f example_6_314/true_error_violin_gen.png ]; then echo "file 'true_error_violin_gen.png' not found" ; exit 1 ; fi
-  - if [ ! -f example_6_314/true_posterior_best.png ]; then echo "file 'true_posterior_best.png' not found" ; exit 1 ; fi
-  - if [ ! -f example_6_314/true_posterior_gen.png ]; then echo "file 'true_posterior_gen.png' not found" ; exit 1 ; fi
-  - if [ ! -f example_6_314/twin_alignment.png ]; then echo "file 'twin_alignment.png' not found" ; exit 1 ; fi
-  - if [ ! -f example_6_314/twin_error_violin_best.png ]; then echo "file 'twin_error_violin_best.png' not found" ; exit 1 ; fi
-  - if [ ! -f example_6_314/twin_error_violin_gen.png ]; then echo "file 'twin_error_violin_gen.png' not found" ; exit 1 ; fi
-  - if [ ! -f example_6_314/twin_posterior_best.png ]; then echo "file 'twin_posterior_best.png' not found" ; exit 1 ; fi
-  - if [ ! -f example_6_314/twin_posterior_gen.png ]; then echo "file 'twin_posterior_gen.png' not found" ; exit 1 ; fi
-  - if [ ! -f example_6_314/twin_tree.png ]; then echo "file 'twin_tree.png' not found" ; exit 1 ; fi
 
 after_success:
-  - cd ~/GitHubs/pirouette_article; find .
+  - Rscript -e "mcbette::mcbette_report()"
+  - find .
+
+after_failure:
+  - Rscript -e "mcbette::mcbette_report()"
+  - find .
+
